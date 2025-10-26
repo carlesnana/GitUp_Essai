@@ -1,0 +1,252 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  
+  
+  ul {
+      list-style-type: none;
+      margin: 10;
+      padding: 10;
+      overflow: hidden; 
+      background-color: #333;
+  }
+  
+  
+  li {
+    float: left;
+  }
+  
+   
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+  }
+    
+  li a:hover {
+    background-color: #111;
+  }
+  
+  
+  .nav-link:target {
+      font-weight: bold; 
+  }
+  
+  .nav {
+      background-color:gray;
+  }
+
+.sidebar{
+    display: none;
+    float : left;
+   height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: gray;
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+  }
+
+  .sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold; /* affiche le texte en gras, à savoir le lien "a" */
+}
+  
+  .slideshow{
+      height: 470px;
+      background: white;
+    
+    
+      box-sizing: border-box;
+  }
+  .slide-content{
+      margin: auto;
+      width: 190px;
+      perspective: 1000px;
+      position: relative;
+      padding-top: 50px;
+  }
+  .slide-round{
+      width: 100%;
+      position: absolute;
+      float: right;
+      animation: rotar 15s infinite linear;
+      transform-style: preserve-3d;
+  }
+  .slide-round :hover{
+      animation-play-state: paused;
+      cursor: pointer;
+  }
+  .slide-round a{
+      cursor: pointer;
+  }
+  .slide-round figure{
+      width: 150%;
+      height: 100px;
+      border: 1px solid #4d444d;
+      position: absolute;
+  }
+  .slide-round figure:nth-child(1){
+      transform: rotateY(0deg) translateZ(300px) ;
+  }
+  .slide-round figure:nth-child(2){
+      transform: rotateY(72deg) translateZ(300px) ;
+  }
+  .slide-round figure:nth-child(3){
+      transform: rotateY(144deg) translateZ(300px) ;
+  }
+  .slide-round figure:nth-child(4){
+      transform: rotateY(216deg) translateZ(300px) ;
+  }
+  .slide-round figure:nth-child(5){
+      transform: rotateY(288deg) translateZ(300px) ;
+  }
+  
+  .shadow{
+      position: absolute;
+      box-shadow: 0px 0px 20px 0px #000;
+      border-radius: 2px;
+  }
+  .slide-round img{
+      image-rendering: auto;
+      transition: 300ms;
+      width: 100%;
+      height: 200%;
+  }
+  .slide-round img:hover{
+      transform: scale(1.2);
+      transition: 300ms;
+  }
+  @keyframes rotar{
+      from{
+          transform: rotateY(0deg);
+      } to{
+          transform: rotateY(360deg);
+      }
+  }
+  
+  .img-text-bar{
+      position: absolute;
+      bottom: 0.1%;
+      right: 5%;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bolder;
+      font-family: Tohoma, Garamont, Sans-Serif,Arial;
+      text-align: center;
+      text-decoration-color: skyblue;
+  }
+  
+  b{
+      color: cyan;
+  }
+  
+  
+  .img-text-bar b {
+      color: #8a8a8a; 
+      text-decoration: none;
+      transition: color 0.5s;
+  }
+  
+  
+  .img-text-bar:hover {    
+      border-bottom: 1px skyblue;
+  }
+  
+  .img-text-bar b:hover {    
+      color: greenyellow;
+  }
+
+.fenetre_image {   
+  overflow: hidden;
+  width:100% ;
+  height: 300px; ;
+  position: relative;
+  }
+
+.scroll_photo {
+  display: flex; /* que fait la propriété flex (agit-elle sur la photo? ou sur l'écran?) */
+  animation: scroll 10s linear infinite;
+}
+
+
+@keyframes scroll{
+from {transform : translateX(0);}
+to {transform : translateX(-100%);}
+}
+
+h1{
+    color : gray;
+    height : 50;
+}
+
+#definitions{
+  margin-left: 260px;
+  height: 100%;
+  width: 1000px;
+  position: right;
+  background-color: white;
+  padding-top: 20px;
+  color: gray;
+  text-align: center;
+  display : none;
+}
+
+
+.achilles, .yves, .hermann, .carles {
+  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+}
+
+.equi_list {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);/*quatre colonnes de largeur égales*/
+}
+
+.equi_list li {
+  margin-bottom: 10px;
+}
+
+/*la liste ul d'elts est constituée d'elts li lesquels elts sont des img ici stylisés, paramétrés */
+.equi_list img { 
+  width: 50px;
+  height: auto;
+  
+}
+
+/*pourquoi n'applique t-on pas le style sur le block "nav" mais plutot sur ses compartiments "ul" ? */
+ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+    overflow: hidden; /*overflow: hidden; : Cache tout le contenu qui dépasse du conteneur <ul>.  Si le contenu dépasse la taille du <ul>, il sera coupé au lieu de déborder.*/
+    background-color: #333;
+}
+
+#profils{
+  margin-left: 260px;
+  height: auto;
+  width: 100%;
+  position: relative;
+  display : none;
+  background-color: gray;
+}
+
+p{
+    color : white;
+}
